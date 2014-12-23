@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start address:</strong>
+  <%= @profile.start_address %>
+</p>
+
+<p>
+  <strong>Destination address:</strong>
+  <%= @profile.destination_address %>
+</p>
+
+<p>
+  <strong>Have car:</strong>
+  <%= @profile.have_car %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

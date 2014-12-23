@@ -1,0 +1,47 @@
+<form class="form-horizontal" role="form">
+    <%= form_for(@profile) do |f| %>
+        <% if @profile.errors.any? %>
+            <div id="error_explanation">
+                <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+                <ul>
+                    <% @profile.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+        <div class="form-group">
+            <div class="field col-md-4">
+                <%= f.label :start_address %>
+                <%= f.text_field :start_address, id: 'start_address', class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="field col-md-4">
+                <%= f.label :destination_address %>
+                <%= f.text_field :destination_address, id: 'dest_address', class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="checkbox ">
+                <label>
+                    <%= f.check_box :have_car %>
+                    Have Car?
+                </label>
+            </div>
+        </div>
+        <%= f.fields_for(@profile.build_car) do |car| %>
+            <div class="form-group id">
+                <div class="field col-md-4">
+                    <%= car.label :total_seats %>
+                    <%= car.select :total_seats, options_for_select(1..7), {}, class: "form-control" %>
+                </div>
+            </div>
+        <% end %>
+
+        <div class="actions">
+            <%= f.submit %>
+        </div>
+    <% end %>
+</form>
