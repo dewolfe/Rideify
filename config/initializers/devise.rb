@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'ae9913daa0b0ec42e7296b74a1d7b8a4ce4dd54a63b57d9bc154bb7d6a80f1a03c4012b4fe548e426f673b4c6755935ed3940041f3f1f5c6e26dd7a98ca182ce'
+  # config.secret_key = 'ae47f6931e830e97b8cd48a90ba09a80e176ceb09200f11dc9a1b1b8463cde158aa18874dfe0edd1b3efc9beacf20dc17a556d896413f0de90b25b83bd6065c8'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -61,7 +61,7 @@ Devise.setup do |config|
   # :database      = Support basic authentication with authentication key + password
   # config.http_authenticatable = false
 
-  # If 401 status code should be returned for AJAX features. True by default.
+  # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
 
   # The realm used in Http Basic Authentication. 'Application' by default.
@@ -81,7 +81,7 @@ Devise.setup do |config|
 
   # By default, Devise cleans up the CSRF token on authentication to
   # avoid CSRF token fixation attacks. This means that, when using AJAX
-  # features for sign in and sign up, you need to get a new CSRF token
+  # requests for sign in and sign up, you need to get a new CSRF token
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
 
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '9a1617c45bd6251500793068898443abb5deb6c75974f8ec4f4707f80b4d60e51fd0bd9184969c6d7e7cec2b9355a5982e025c7a1d7ac237eff82ced5a4850b6'
+  # config.pepper = '0067d5a96fa3bb11ee65fac73c88ee7f87440292baeb6686a6719b633c771f2f950adda754304531a06bb0f5113c7994c8e746b82a960f7bf3c3e0e125eeb612'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -223,7 +223,7 @@ Devise.setup do |config|
   # If you have any extra navigational formats, like :iphone or :mobile, you
   # should add them to the navigational formats lists.
   #
-  # The "*/*" below is required to match Internet Explorer features.
+  # The "*/*" below is required to match Internet Explorer requests.
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
