@@ -20,6 +20,7 @@ describe "Profiles" do
       check 'profile_have_car'
       select '4',from:'profile_car_total_seats'
       click_button 'Create Profile'
+      expect(page).to have_content 'Success'
     end
   end
 end
