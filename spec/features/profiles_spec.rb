@@ -14,6 +14,7 @@ describe "Profiles" do
       fill_in 'Email', with: "test@nada.com"
       fill_in 'user_password', with: 'abc12345678'
       click_button 'Log in'
+      expect(page).to have_content 'Success'
       visit 'profiles/new'
       fill_in 'start_address', with:'53 Chemin Fox Run, Wakefield, QC, Canada'
       fill_in 'dest_address', with: '116 Albert Street, Ottawa, ON, Canada'
