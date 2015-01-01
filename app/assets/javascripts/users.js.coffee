@@ -1,21 +1,21 @@
 $ ->
-   autocompletestart = new google.maps.places.Autocomplete((document.getElementById("start_address")),
+  autocompletestart = new google.maps.places.Autocomplete((document.getElementById("start_address")),
       types: ["geocode"]
     )
   autocompleteend = new google.maps.places.Autocomplete((document.getElementById("dest_address")),
     types: ["geocode"]
-  )
+    )
 
   google.maps.event.addListener autocompletestart, "place_changed", ->
       fillInAddress()
       return
 
-    return
+  return
   google.maps.event.addListener autocompleteend, "place_changed", ->
      fillInAddress()
      return
 
-    return
+  return
   fillInAddress = ->
     placestart = autocompletestart.getPlace()
   fillInAddress = ->
